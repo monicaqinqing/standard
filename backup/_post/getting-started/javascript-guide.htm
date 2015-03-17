@@ -1,0 +1,305 @@
+<!doctype html><!--[if lte IE 7 ]><html class="no-js ie lte7 lte8 lte9 getting-started"><![endif]--><!--[if IE 8 ]><html class="no-js ie ie8 lte8 lte9 getting-started"><![endif]--><!--[if IE 9 ]><html class="no-js ie ie9 lte9 getting-started"><![endif]--><!--[if (gt IE 9)|!(IE)]><!--><html class="no-js getting-started"><!--<![endif]--><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="description" content="Amaze UI 是一个移动优先的跨屏前端框架。"><meta name="keywords" content="HTML, HTML5, CSS, CSS3, JS, JavaScript, framework, Amaze UI, front-end, frontend, web development, 前端框架, 开源, meizi, meizi UI, 妹子UI, Web Components"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>开始使用 - Javascript-guide | Amaze UI</title><meta name="renderer" content="webkit"><meta http-equiv="Cache-Control" content="no-siteapp"/><link rel="alternate icon" type="image/png" href="http://a.static.amazeui.org/assets/2.x/i/favicon.png"><link rel="apple-touch-icon-precomposed" href="http://a.static.amazeui.org/assets/2.x/i/app-icon72x72@2x.png"><meta name="apple-mobile-web-app-title" content="Amaze UI"/><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="stylesheet" href="../css/amazeui.min.css"><link rel="stylesheet" href="../css/amaze.min.css"><!--[if (gte IE 9)|!(IE)]><!--><script src="../js/jquery.min.js" ></script><!--<![endif]--><!--[if lt IE 9]><script src="../../libs.baidu.com/jquery/1.11.1/jquery.min.js" tppabs="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="../../cdn.staticfile.org/modernizr/2.8.3/modernizr.js" tppabs="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="../../a.static.amazeui.org/assets/2.x/js/polyfill/rem.min.js" tppabs="http://a.static.amazeui.org/assets/2.x/js/polyfill/rem.min.js"></script>
+<script src="../../a.static.amazeui.org/assets/2.x/js/polyfill/respond.min.js" tppabs="http://a.static.amazeui.org/assets/2.x/js/polyfill/respond.min.js"></script>
+<script src="../../a.static.amazeui.org/assets/2.x/js/amazeui.legacy.js" tppabs="http://a.static.amazeui.org/assets/2.x/js/amazeui.legacy.js"></script><![endif]--><!--[if (gte IE 9)|!(IE)]><!--><script src="../js/amazeui.min.js"></script><!--<![endif]--></head><body class="" data-amui="2.x"><!--[if lte IE 9 ]><div class="am-alert am-alert-danger ie-warning" data-am-alert>
+  <button type="button" class="am-close">&times;</button>
+  <div class="am-container">
+    温馨提醒：你的浏览器太古董了，妹子无爱，<a
+    href="javascript:if(confirm('http://browsehappy.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://browsehappy.com/'" tppabs="http://browsehappy.com/" target="_blank">还不速速换一个</a>！</div></div><![endif]--><header id="amz-header"><div class="amz-container am-cf"><h1><a href="../index.htm" tppabs="http://amazeui.org/">Amaze UI</a> <span class="am-badge am-badge-danger">2.0</span></h1><button class="am-btn am-btn-primary am-show-sm-only" data-am-collapse="{target: '.amz-header-nav'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button><nav><ul class="amz-header-nav am-collapse"><li class="am-active"><a href="../getting-started.htm" tppabs="http://amazeui.org/getting-started">开始使用</a></li><li><a href="javascript:if(confirm('http://amazeui.org/css  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ������, �����������, ����Ŀ����ֹͣ��  \n\n�����ڷ������ϴ���?'))window.location='http://amazeui.org/css'" tppabs="http://amazeui.org/css">CSS</a></li><li><a href="../javascript.htm" tppabs="http://amazeui.org/javascript">JS 插件</a></li><li><a href="../widgets.htm" tppabs="http://amazeui.org/widgets">Web 组件</a></li><li><a href="javascript:if(confirm('http://amazeui.org/1.x  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ������, �����������, ����Ŀ����ֹͣ��  \n\n�����ڷ������ϴ���?'))window.location='http://amazeui.org/1.x'" tppabs="http://amazeui.org/1.x">v1.x</a></li><li class="amz-cse"><form action="http://zhannei.baidu.com/cse/search" method="get" target="_blank" class="cse-form"><input type="hidden" name="s" value="13988471460650623274"> <input type="hidden" name="entry" value="1"> <input type="text" required name="q" placeholder="搜索" autocomplete="off"> <button><span class="am-icon-search"></span></button></form></li></ul></nav></div></header><div class="amz-banner"><div class="amz-container" data-am-scrollspy="{animation: 'scale-up', repeat: false}"><h1>开始使用</h1><p>Amaze UI 概览，下载、使用，模板示例，二次开发……</p></div></div><section class="" id="amz-main" data-tag="javascript-guide"><div class="am-g am-g-fixed"><div class="col-md-3 am-u-md-3"><div id="amz-offcanvas" class="am-offcanvas doc-offcanvas"><section class="amz-sidebar am-offcanvas-bar"><ul class="am-nav"><li class="am-nav-header">基本使用</li><li><a href="layouts.htm" tppabs="http://amazeui.org/getting-started/layouts">布局示例<span class="am-nav-en">Layouts</span></a></li><li><a href="compatibility.htm" tppabs="http://amazeui.org/getting-started/compatibility">兼容性列表<span class="am-nav-en">Compatibility</span></a></li><li><a href="javascript:if(confirm('https://github.com/allmobilize/amazeui/blob/master/CHANGELOG.md  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/allmobilize/amazeui/blob/master/CHANGELOG.md'" tppabs="https://github.com/allmobilize/amazeui/blob/master/CHANGELOG.md" target="_blank">更新记录<span class="am-nav-en">Change Log</span></a></li><li><a href="webapp.htm" tppabs="http://amazeui.org/getting-started/webapp">Web App 相关<span class="am-nav-en">Web App</span></a></li><li><a href="collections.htm" tppabs="http://amazeui.org/getting-started/collections">藏品<span class="am-nav-en">Collections</span></a></li><li class="am-nav-header">进阶开发</li><li><a href="project-structure.htm" tppabs="http://amazeui.org/getting-started/project-structure">项目结构<span class="am-nav-en">Structure</span></a></li><li><a href="widget-dev.htm" tppabs="http://amazeui.org/getting-started/widget-dev">Web 组件简介<span class="am-nav-en">Web Component</span></a></li><li><a href="html-css.htm" tppabs="http://amazeui.org/getting-started/html-css">HTML/CSS 规范<span class="am-nav-en">Rules</span></a></li><li><a href="javascript.htm" tppabs="http://amazeui.org/getting-started/javascript">JavaScript 规范<span class="am-nav-en">Rules</span></a></li><li><a href="widget.htm" tppabs="http://amazeui.org/getting-started/widget">Web 组件规范<span class="am-nav-en">Rules</span></a></li><li class="am-nav-header">你来我往</li><li><a href="faq.htm" tppabs="http://amazeui.org/getting-started/faq">常见问题<span class="am-nav-en">FAQs</span></a></li><li><a href="feedback.htm" tppabs="http://amazeui.org/getting-started/feedback">Bug 反馈<span class="am-nav-en">Feedback</span></a></li><li><a href="next.htm" tppabs="http://amazeui.org/getting-started/next">遇见未来<span class="am-nav-en">Next</span></a></li><li><a href="credits.htm" tppabs="http://amazeui.org/getting-started/credits">感谢有你<span class="am-nav-en">Credits</span></a></li><li><a href="team.htm" tppabs="http://amazeui.org/getting-started/team">开发者说<span class="am-nav-en">Team</span></a></li></ul></section><div class="amz-pager"><a href="#up" class="am-icon-caret-up" data-rel="scrollUp"></a> <a href="#down" class="am-icon-caret-down" data-rel="scrollDown"></a></div></div></div><div class="col-md-9 am-u-md-9 doc-content"><div class="doc-toc"><h2><span>目录</span></h2><div class="doc-toc-bd"><ul class="md-toc"><li><a href="#%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81">文件编码</a></li><li><a href="#javascript-%E8%AF%AD%E8%A8%80%E8%A7%84%E8%8C%83">JavaScript 语言规范</a><ul class="am-collapse"><li><a href="#%E4%BD%BF%E7%94%A8%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F">使用严格模式</a></li><li><a href="#%E8%AF%AD%E5%8F%A5%E7%9A%84%E7%BB%93%E5%B0%BE%E6%80%BB%E6%98%AF%E4%BD%BF%E7%94%A8%E5%88%86%E5%8F%B7">语句的结尾总是使用分号</a></li><li><a href="#%E5%8F%98%E9%87%8F%E4%BD%BF%E7%94%A8%E5%89%8D%E5%BF%85%E9%A1%BB%E4%BD%BF%E7%94%A8-var-%E5%A3%B0%E6%98%8E">变量使用前必须使用 var 声明</a></li><li><a href="#%E5%9D%97%E5%86%85%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E">块内函数声明</a></li><li><a href="#%E5%BC%82%E5%B8%B8">异常</a></li><li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8">自定义异常</a></li><li><a href="#%E6%A0%87%E5%87%86%E7%89%B9%E6%80%A7%E6%80%BB%E6%98%AF%E7%94%B1%E4%BA%8E%E9%9D%9E%E6%A0%87%E5%87%86%E7%89%B9%E6%80%A7">标准特性总是由于非标准特性</a></li><li><a href="#%E4%B8%8D%E8%A6%81%E5%B0%81%E8%A3%85%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B">不要封装基本类型</a></li><li><a href="#this">this</a></li><li><a href="#%E4%B8%8D%E8%A6%81%E5%9C%A8-array-%E4%B8%8A%E4%BD%BF%E7%94%A8-for-in-%E5%BE%AA%E7%8E%AF">不要在 Array 上使用 for-in 循环</a></li><li><a href="#%E4%B8%8D%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%B3%E8%81%94%E6%95%B0%E7%BB%84">不要使用关联数组</a></li><li><a href="#%E7%94%A8-array-%E5%92%8C-object-%E5%AD%97%E9%9D%A2%E9%87%8F%E4%BB%A3%E6%9B%BF-array-%E5%92%8C-object-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0">用 Array 和 Object 字面量代替 Array 和 Object 构造函数</a></li><li><a href="#%E7%B1%BB%E6%96%B9%E6%B3%95%E7%9A%84%E5%AE%9A%E4%B9%89">类方法的定义</a></li><li><a href="#%E7%A6%81%E6%AD%A2%E4%BF%AE%E6%94%B9%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8E%9F%E5%9E%8B">禁止修改内置对象的原型</a></li><li><a href="#%E9%97%AD%E5%8C%85">闭包</a></li><li><a href="#eval">eval()</a></li><li><a href="#%E4%B8%8D%E8%A6%81%E4%BD%BF%E7%94%A8-with-%E8%AF%AD%E5%8F%A5">不要使用 with() {}语句</a></li><li><a href="#%E4%B8%8D%E8%A6%81%E7%BB%99-setinterval-settimeout-%E4%BC%A0%E9%80%92%E5%AD%97%E7%AC%A6%E4%B8%B2">不要给 setInterval / setTimeOut 传递字符串</a></li><li><a href="#%E6%8B%BC%E6%8E%A5%E5%AD%97%E7%AC%A6%E4%B8%B2">拼接字符串</a></li></ul></li><li><a href="#javascript-%E7%BC%96%E7%A0%81%E9%A3%8E%E6%A0%BC">JavaScript 编码风格</a><ul class="am-collapse"><li><a href="#%E5%91%BD%E5%90%8D%E6%96%B9%E5%BC%8F">命名方式</a></li><li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89-tostring-%E6%96%B9%E6%B3%95">自定义 toString() 方法</a></li><li><a href="#%E5%8F%98%E9%87%8F%E5%BB%B6%E8%BF%9F%E5%88%9D%E5%A7%8B%E5%8C%96">变量延迟初始化</a></li><li><a href="#%E6%98%8E%E7%A1%AE%E4%BD%9C%E7%94%A8%E5%9F%9F">明确作用域</a></li><li><a href="#%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F">代码格式</a></li><li><a href="#%E5%9C%86%E6%8B%AC%E5%8F%B7">圆括号</a></li><li><a href="#%E5%AD%97%E7%AC%A6%E4%B8%B2">字符串</a></li><li><a href="#%E5%AF%B9%E8%B1%A1">对象</a></li><li><a href="#%E6%B3%A8%E9%87%8A">注释</a></li></ul></li><li><a href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5">参考链接</a></li></ul></div></div><h1 id="allmobilize-javascript-style-guide">AllMobilize JavaScript Style Guide <a href="#allmobilize-javascript-style-guide" title="Heading anchor" class="doc-anchor"></a></h1><hr/><h2 id="文件编码">文件编码 <a href="#%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81" title="Heading anchor" class="doc-anchor"></a></h2><ul><li>使用不带 BOM 的 <code>UTF-8</code> 编码。</li></ul><h2 id="javascript-语言规范">JavaScript 语言规范 <a href="#javascript-%E8%AF%AD%E8%A8%80%E8%A7%84%E8%8C%83" title="Heading anchor" class="doc-anchor"></a></h2><h3 id="使用严格模式">使用<a href="javascript:if(confirm('https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Strict_mode  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Strict_mode'" tppabs="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Strict_mode">严格模式</a> <a href="#%E4%BD%BF%E7%94%A8%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F" title="Heading anchor" class="doc-anchor"></a></h3><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-pi">'use strict'</span>;
+
+<span class="hljs-comment">// code here</span>
+</code></pre></div><h3 id="语句的结尾总是使用分号">语句的结尾总是使用分号 <a href="#%E8%AF%AD%E5%8F%A5%E7%9A%84%E7%BB%93%E5%B0%BE%E6%80%BB%E6%98%AF%E4%BD%BF%E7%94%A8%E5%88%86%E5%8F%B7" title="Heading anchor" class="doc-anchor"></a></h3><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-keyword">var</span> foo = bar; <span class="hljs-comment">// semicolon here.</span>
+
+<span class="hljs-keyword">var</span> foo = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+};  <span class="hljs-comment">// semicolon here.</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}  <span class="hljs-comment">// no semicolon here.</span>
+</code></pre></div><h3 id="变量使用前必须使用-var-声明">变量使用前必须使用 <code>var</code> 声明 <a href="#%E5%8F%98%E9%87%8F%E4%BD%BF%E7%94%A8%E5%89%8D%E5%BF%85%E9%A1%BB%E4%BD%BF%E7%94%A8-var-%E5%A3%B0%E6%98%8E" title="Heading anchor" class="doc-anchor"></a></h3><h3 id="块内函数声明">块内函数声明 <a href="#%E5%9D%97%E5%86%85%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E" title="Heading anchor" class="doc-anchor"></a></h3><p>不要在块内声明一个函数（严格模式会报语法错误）。如果确实需要在块中定义函数，可以使用函数表达式来声明函数。</p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Recommended */</span>
+<span class="hljs-keyword">if</span> (x) {
+    <span class="hljs-keyword">var</span> foo = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{};
+}
+</code></pre></div><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Wrong */</span>
+<span class="hljs-keyword">if</span> (x) {
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span><span class="hljs-params">()</span> </span>{}
+}
+</code></pre></div><h3 id="异常">异常 <a href="#%E5%BC%82%E5%B8%B8" title="Heading anchor" class="doc-anchor"></a></h3><p>可以使用，抛出错误，而不是字符串。</p><h3 id="自定义异常">自定义异常 <a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8" title="Heading anchor" class="doc-anchor"></a></h3><p>恰当的时候可以使用。</p><h3 id="标准特性总是由于非标准特性">标准特性总是由于非标准特性 <a href="#%E6%A0%87%E5%87%86%E7%89%B9%E6%80%A7%E6%80%BB%E6%98%AF%E7%94%B1%E4%BA%8E%E9%9D%9E%E6%A0%87%E5%87%86%E7%89%B9%E6%80%A7" title="Heading anchor" class="doc-anchor"></a></h3><p>优先使用原生的方法，而不是自行封装的非标准接口。</p><h3 id="不要封装基本类型">不要封装基本类型 <a href="#%E4%B8%8D%E8%A6%81%E5%B0%81%E8%A3%85%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B" title="Heading anchor" class="doc-anchor"></a></h3><p>明确用于类型转换的场景除外。</p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Recommended */</span>
+<span class="hljs-keyword">var</span> x = <span class="hljs-built_in">Boolean</span>(<span class="hljs-number">0</span>);
+
+<span class="hljs-keyword">if</span> (x) {
+    alert(<span class="hljs-string">'hi'</span>);  <span class="hljs-comment">// This will never be alerted.</span>
+}
+
+<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Boolean</span>(<span class="hljs-number">0</span>) == <span class="hljs-string">'boolean'</span>;
+<span class="hljs-keyword">typeof</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Boolean</span>(<span class="hljs-number">0</span>) == <span class="hljs-string">'object'</span>;
+</code></pre></div><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Not recommended */</span>
+<span class="hljs-keyword">var</span> x = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Boolean</span>(<span class="hljs-literal">false</span>);
+
+<span class="hljs-keyword">if</span> (x) {
+    alert(<span class="hljs-string">'hi'</span>);  <span class="hljs-comment">// Shows 'hi'.</span>
+}
+</code></pre></div><h3 id="this"><code>this</code> <a href="#this" title="Heading anchor" class="doc-anchor"></a></h3><p>仅在构造函数、方法、闭包中使用 <code>this</code> 关键字，以避免错误的引用的。</p><h3 id="不要在-array-上使用-for-in-循环">不要在 Array 上使用 <code>for-in</code> 循环 <a href="#%E4%B8%8D%E8%A6%81%E5%9C%A8-array-%E4%B8%8A%E4%BD%BF%E7%94%A8-for-in-%E5%BE%AA%E7%8E%AF" title="Heading anchor" class="doc-anchor"></a></h3><h3 id="不要使用关联数组">不要使用关联数组 <a href="#%E4%B8%8D%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%B3%E8%81%94%E6%95%B0%E7%BB%84" title="Heading anchor" class="doc-anchor"></a></h3><p>需要键值对映射时直接使用 <code>Obeject</code>。</p><h3 id="用-array-和-object-字面量代替-array-和-object-构造函数">用 Array 和 Object 字面量代替 Array 和 Object 构造函数 <a href="#%E7%94%A8-array-%E5%92%8C-object-%E5%AD%97%E9%9D%A2%E9%87%8F%E4%BB%A3%E6%9B%BF-array-%E5%92%8C-object-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0" title="Heading anchor" class="doc-anchor"></a></h3><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Recommend */</span>
+<span class="hljs-keyword">var</span> arr = [x1, x2, x3],
+    obj = {
+        a: <span class="hljs-number">0</span>,
+        b: <span class="hljs-number">1</span>,
+        c: <span class="hljs-number">2</span>
+    };
+</code></pre></div><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Not Recommend */</span>
+<span class="hljs-keyword">var</span> arr = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(x1, x2),
+    obj = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
+</code></pre></div><h3 id="类方法的定义">类方法的定义 <a href="#%E7%B1%BB%E6%96%B9%E6%B3%95%E7%9A%84%E5%AE%9A%E4%B9%89" title="Heading anchor" class="doc-anchor"></a></h3><p>推荐把方法定义放在类的原型对象中。</p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Recommended */</span>
+<span class="hljs-keyword">var</span> Foo = {
+    <span class="hljs-comment">// Foo object</span>
+};
+
+Foo.prototype.bar = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// bar method</span>
+};
+</code></pre></div><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Not recommended */</span>
+<span class="hljs-keyword">var</span> Foo = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">this</span>.bar = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// bar method</span>
+    };
+};
+</code></pre></div><h3 id="禁止修改内置对象的原型">禁止修改内置对象的原型 <a href="#%E7%A6%81%E6%AD%A2%E4%BF%AE%E6%94%B9%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8E%9F%E5%9E%8B" title="Heading anchor" class="doc-anchor"></a></h3><p>如 <code>Object.prototype</code>、<code>Array.prototype</code>、<code>Function.prototype</code> 等。</p><h3 id="闭包">闭包 <a href="#%E9%97%AD%E5%8C%85" title="Heading anchor" class="doc-anchor"></a></h3><p>可以使用，但应该谨慎。</p><p>有一点需要牢记，闭包保留了一个指向它封闭作用域的指针，所以，在给 DOM 元素附加闭包时，很可能会产生循环引用， 进一步导致内存泄漏。比如下面的代码：</p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Wrong style */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span><span class="hljs-params">(element, a, b)</span> </span>{
+    element.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{ <span class="hljs-comment">/* uses a and b */</span> };
+}
+</code></pre></div><p>这里，即使没有使用 <code>element</code>，闭包也保留了 <code>element</code>、<code>a</code> 和 <code>b</code> 的引用。由于 <code>element</code> 也保留了对闭包的引用，这就产生了循环引用，导致不能被 GC 回收。可将代码重构为:</p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span><span class="hljs-params">(element, a, b)</span> </span>{
+    element.onclick = bar(a, b);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bar</span><span class="hljs-params">(a, b)</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{ <span class="hljs-comment">/* uses a and b */</span> }
+}
+</code></pre></div><h3 id="eval">eval() <a href="#eval" title="Heading anchor" class="doc-anchor"></a></h3><p>一般情况不要使用 <code>eval()</code>，使用 <code>JSON.parse</code> 解析系列化字符串。</p><h3 id="不要使用-with-语句">不要使用 <code>with() {}</code>语句 <a href="#%E4%B8%8D%E8%A6%81%E4%BD%BF%E7%94%A8-with-%E8%AF%AD%E5%8F%A5" title="Heading anchor" class="doc-anchor"></a></h3><h3 id="不要给-setinterval-settimeout-传递字符串">不要给 <code>setInterval</code> / <code>setTimeOut</code> 传递字符串 <a href="#%E4%B8%8D%E8%A6%81%E7%BB%99-setinterval-settimeout-%E4%BC%A0%E9%80%92%E5%AD%97%E7%AC%A6%E4%B8%B2" title="Heading anchor" class="doc-anchor"></a></h3><h3 id="拼接字符串">拼接字符串 <a href="#%E6%8B%BC%E6%8E%A5%E5%AD%97%E7%AC%A6%E4%B8%B2" title="Heading anchor" class="doc-anchor"></a></h3><p>一般情况使用 <code>+</code> 操作符拼接字符串。如果存在大量的字符串拼接，推荐采用数组 <code>join()</code> 拼接字符串。</p><p><strong>不要使用多行字符串字面量</strong>。</p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Recommended */</span>
+<span class="hljs-keyword">var</span> myString = <span class="hljs-string">'A rather long string of English text, an error message '</span> +
+    <span class="hljs-string">'actually that just keeps going and going -- an error '</span> +
+    <span class="hljs-string">'message to make the Energizer bunny blush (right through '</span> +
+    <span class="hljs-string">'those Schwarzenegger shades)! Where was I? Oh yes, '</span> +
+    <span class="hljs-string">'you\'ve got an error and all the extraneous whitespace is '</span> +
+    <span class="hljs-string">'just gravy.  Have a nice day.'</span>;
+</code></pre></div><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Not recommended */</span>
+<span class="hljs-keyword">var</span> myString = <span class="hljs-string">'A rather long string of English text, an error message \
+                actually that just keeps going and going -- an error \
+                message to make the Energizer bunny blush (right through \
+                those Schwarzenegger shades)! Where was I? Oh yes, \
+                you\'ve got an error and all the extraneous whitespace is \
+                just gravy.  Have a nice day.'</span>;
+</code></pre></div><h2 id="javascript-编码风格">JavaScript 编码风格 <a href="#javascript-%E7%BC%96%E7%A0%81%E9%A3%8E%E6%A0%BC" title="Heading anchor" class="doc-anchor"></a></h2><h3 id="命名方式">命名方式 <a href="#%E5%91%BD%E5%90%8D%E6%96%B9%E5%BC%8F" title="Heading anchor" class="doc-anchor"></a></h3><h4 id="常量">常量 <a href="#%E5%B8%B8%E9%87%8F" title="Heading anchor" class="doc-anchor"></a></h4><ul><li>使用全大写字母，并用下划线分隔单词，形如 <code>CONST_NAME_LIKE_THIS</code>；</li><li>因浏览器支持问题，不要使用 <code>const</code> <a href="javascript:if(confirm('https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const'" tppabs="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const">关键字</a>。</li></ul><h4 id="变量">变量 <a href="#%E5%8F%98%E9%87%8F" title="Heading anchor" class="doc-anchor"></a></h4><p>变量采用小驼峰式命名，如 <code>myVar</code>。</p><h4 id="类名">类名 <a href="#%E7%B1%BB%E5%90%8D" title="Heading anchor" class="doc-anchor"></a></h4><p>采用大驼峰式（<a href="javascript:if(confirm('http://zh.wikipedia.org/wiki/%E5%B8%95%E6%96%AF%E5%8D%A1%E5%91%BD%E5%90%8D%E6%B3%95  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://zh.wikipedia.org/wiki/%E5%B8%95%E6%96%AF%E5%8D%A1%E5%91%BD%E5%90%8D%E6%B3%95'" tppabs="http://zh.wikipedia.org/wiki/%E5%B8%95%E6%96%AF%E5%8D%A1%E5%91%BD%E5%90%8D%E6%B3%95">帕斯卡命名法</a>）命名，如 <code>MyClass</code>。</p><h4 id="私有变量">私有变量 <a href="#%E7%A7%81%E6%9C%89%E5%8F%98%E9%87%8F" title="Heading anchor" class="doc-anchor"></a></h4><p>私有属性、变量和方法以下划线 <code>_</code> 开头，形如 <code>_privateMethod</code>。</p><h4 id="文件名">文件名 <a href="#%E6%96%87%E4%BB%B6%E5%90%8D" title="Heading anchor" class="doc-anchor"></a></h4><p>全部使用小写字母并以 <code>.js</code> 结尾。</p><h3 id="自定义-tostring-方法">自定义 <code>toString()</code> 方法 <a href="#%E8%87%AA%E5%AE%9A%E4%B9%89-tostring-%E6%96%B9%E6%B3%95" title="Heading anchor" class="doc-anchor"></a></h3><p>可以自定义 <code>toString()</code> 方法, 但应该确保应是成功调用且不要抛异常。</p><h3 id="变量延迟初始化">变量延迟初始化 <a href="#%E5%8F%98%E9%87%8F%E5%BB%B6%E8%BF%9F%E5%88%9D%E5%A7%8B%E5%8C%96" title="Heading anchor" class="doc-anchor"></a></h3><p>允许延迟变量初始化，不必在声明变量时初始化。</p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-keyword">var</span> name = <span class="hljs-string">'My Name'</span>,
+    future;
+</code></pre></div><h3 id="明确作用域">明确作用域 <a href="#%E6%98%8E%E7%A1%AE%E4%BD%9C%E7%94%A8%E5%9F%9F" title="Heading anchor" class="doc-anchor"></a></h3><p>任何时候都要明确作用域，以提高可移植性和清晰度。例如，不要依赖作用域链中的 <code>window</code> 对象。</p><h3 id="代码格式">代码格式 <a href="#%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F" title="Heading anchor" class="doc-anchor"></a></h3><h4 id="代码长度不超过-80-个字符。">代码长度不超过 80 个字符。 <a href="#%E4%BB%A3%E7%A0%81%E9%95%BF%E5%BA%A6%E4%B8%8D%E8%B6%85%E8%BF%87-80-%E4%B8%AA%E5%AD%97%E7%AC%A6%E3%80%82" title="Heading anchor" class="doc-anchor"></a></h4><h4 id="缩进">缩进 <a href="#%E7%BC%A9%E8%BF%9B" title="Heading anchor" class="doc-anchor"></a></h4><p>缩进 <strong>2 个空格</strong>，如果使用 Tab，需要把 Tab 设置成 2 个空格。</p><h4 id="花括号">花括号 <a href="#%E8%8A%B1%E6%8B%AC%E5%8F%B7" title="Heading anchor" class="doc-anchor"></a></h4><p>始终添加花括号。</p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-keyword">if</span> (something) {
+    <span class="hljs-comment">// ...</span>
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre></div><p><strong>表示块起始的大括号，不能换行：</strong></p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Recommended */</span>
+<span class="hljs-keyword">if</span> (something) {
+    <span class="hljs-comment">// ...</span>
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre></div><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Not recommended */</span>
+<span class="hljs-keyword">if</span> (something)
+{
+    <span class="hljs-comment">// ...</span>
+}
+<span class="hljs-keyword">else</span>
+{
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre></div><p><strong>不允许一行判断，一律换行</strong></p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Recommended */</span>
+<span class="hljs-keyword">if</span> (foo) {
+    <span class="hljs-comment">// do something</span>
+}
+</code></pre></div><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Not recommended */</span>
+<span class="hljs-keyword">if</span> (foo) <span class="hljs-keyword">return</span>
+</code></pre></div><h4 id="数组和对象的初始化">数组和对象的初始化 <a href="#%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96" title="Heading anchor" class="doc-anchor"></a></h4><p>如果初始值不是很长，就保持写在单行上：</p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];  <span class="hljs-comment">// No space after [ or before ].</span>
+<span class="hljs-keyword">var</span> obj = {a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>, c: <span class="hljs-number">3</span>};  <span class="hljs-comment">// No space after { or before }.</span>
+</code></pre></div><p>初始值占用多行时，缩进 4 个空格。</p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">// Object initializer.</span>
+<span class="hljs-keyword">var</span> inset = {
+    top: <span class="hljs-number">10</span>,
+    right: <span class="hljs-number">20</span>,
+    bottom: <span class="hljs-number">15</span>,
+    left: <span class="hljs-number">12</span>
+};
+
+<span class="hljs-comment">// Array initializer.</span>
+<span class="hljs-keyword">this</span>.rows_ = [
+    <span class="hljs-string">'"Slartibartfast" &lt;fjordmaster@magrathea.com&gt;'</span>,
+    <span class="hljs-string">'"Zaphod Beeblebrox" &lt;theprez@universe.gov&gt;'</span>,
+    <span class="hljs-string">'"Ford Prefect" &lt;ford@theguide.com&gt;'</span>,
+    <span class="hljs-string">'"Arthur Dent" &lt;has.no.tea@gmail.com&gt;'</span>,
+    <span class="hljs-string">'"Marvin the Paranoid Android" &lt;marv@googlemail.com&gt;'</span>,
+    <span class="hljs-string">'the.mice@magrathea.com'</span>
+];
+
+<span class="hljs-comment">// Used in a method call.</span>
+goog.dom.createDom(goog.dom.TagName.DIV, {
+    id: <span class="hljs-string">'foo'</span>,
+    className: <span class="hljs-string">'some-css-class'</span>,
+    style: <span class="hljs-string">'display:none'</span>
+}, <span class="hljs-string">'Hello, world!'</span>);
+</code></pre></div><p>比较长的标识符或者数值，不要为了让代码好看些而手工对齐。 如:</p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Recommended */</span>
+CORRECT_Object.prototype = {
+    a: <span class="hljs-number">0</span>,
+    b: <span class="hljs-number">1</span>,
+    lengthyName: <span class="hljs-number">2</span>
+};
+
+<span class="hljs-comment">/* Not recommended */</span>
+WRONG_Object.prototype = {
+    a          : <span class="hljs-number">0</span>,
+    b          : <span class="hljs-number">1</span>,
+    lengthyName: <span class="hljs-number">2</span>
+};
+</code></pre></div><h4 id="函数参数">函数参数 <a href="#%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0" title="Heading anchor" class="doc-anchor"></a></h4><p>尽量让函数参数在同一行上。如果一行超过 80 字符，每个参数独占一行，并以 4 个空格缩进，或者与括号对齐，以提高可读性。尽可能不要让每行超过 80 个字符。比如：</p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">// Four-space, wrap at 80.  Works with very long function names, survives</span>
+<span class="hljs-comment">// renaming without reindenting, low on space.</span>
+goog.foo.bar.doThingThatIsVeryDifficultToExplain = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(
+    veryDescriptiveArgumentNumberOne, veryDescriptiveArgumentTwo,
+    tableModelEventHandlerProxy, artichokeDescriptorAdapterIterator)</span> </span>{
+  <span class="hljs-comment">// ...</span>
+};
+
+<span class="hljs-comment">// Four-space, one argument per line.  Works with long function names,</span>
+<span class="hljs-comment">// survives renaming, and emphasizes each argument.</span>
+goog.foo.bar.doThingThatIsVeryDifficultToExplain = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(
+    veryDescriptiveArgumentNumberOne,
+    veryDescriptiveArgumentTwo,
+    tableModelEventHandlerProxy,
+    artichokeDescriptorAdapterIterator)</span> </span>{
+  <span class="hljs-comment">// ...</span>
+};
+
+<span class="hljs-comment">// Parenthesis-aligned indentation, wrap at 80.  Visually groups arguments,</span>
+<span class="hljs-comment">// low on space.</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span><span class="hljs-params">(veryDescriptiveArgumentNumberOne, veryDescriptiveArgumentTwo,
+             tableModelEventHandlerProxy, artichokeDescriptorAdapterIterator)</span> </span>{
+  <span class="hljs-comment">// ...</span>
+}
+
+<span class="hljs-comment">// Parenthesis-aligned, one argument per line.  Visually groups and</span>
+<span class="hljs-comment">// emphasizes each individual argument.</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bar</span><span class="hljs-params">(veryDescriptiveArgumentNumberOne,
+             veryDescriptiveArgumentTwo,
+             tableModelEventHandlerProxy,
+             artichokeDescriptorAdapterIterator)</span> </span>{
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre></div><h4 id="空行">空行 <a href="#%E7%A9%BA%E8%A1%8C" title="Heading anchor" class="doc-anchor"></a></h4><p>使用空行来划分一组逻辑上相关联的代码片段。<strong>文件末尾空一行。</strong></p><div class="doc-code demo-highlight"><pre class=""><code class="javascript">doSomethingTo(x);
+doSomethingElseTo(x);
+andThen(x);
+
+nowDoSomethingWith(y);
+
+andNowWith(z);
+
+<span class="hljs-keyword">var</span> baseP = base.prototype,
+    childP;
+
+childP = child.prototype = <span class="hljs-built_in">Object</span>.create(baseP);
+childP.constructor = child;
+childP._super = baseP;
+
+<span class="hljs-keyword">if</span> (properties) {
+    extend(childP, properties);
+}
+</code></pre></div><h4 id="二元和三元操作符">二元和三元操作符 <a href="#%E4%BA%8C%E5%85%83%E5%92%8C%E4%B8%89%E5%85%83%E6%93%8D%E4%BD%9C%E7%AC%A6" title="Heading anchor" class="doc-anchor"></a></h4><p>操作符始终写在前一行, 以免分号的隐式插入产生预想不到的问题。如果一行放不下, 还是按照上述的缩进风格来换行。</p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-keyword">var</span> x = a ? b : c;  <span class="hljs-comment">// All on one line if it will fit.</span>
+
+<span class="hljs-comment">// Indentation +4 is OK.</span>
+<span class="hljs-keyword">var</span> y = a ?
+    longButSimpleOperandB : longButSimpleOperandC;
+
+<span class="hljs-comment">// Indenting to the line position of the first operand is also OK.</span>
+<span class="hljs-keyword">var</span> z = a ?
+        moreComplicatedB :
+        moreComplicatedC;
+</code></pre></div><p><strong><code>.</code> 操作符也是如此：</strong></p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-keyword">var</span> x = foo.bar().
+    doSomething().
+    doSomethingElse();
+</code></pre></div><h4 id="空格">空格 <a href="#%E7%A9%BA%E6%A0%BC" title="Heading anchor" class="doc-anchor"></a></h4><ul><li>移除行末的空格；</li><li>调用函数的时候，函数名与左括号之间没有空格；</li><li>参数序列和圆括号之间，没有空格；</li><li>操作符之间空一格（就一格）；</li><li>所有其它语法元素和和圆括号之间，都有一个空格。</li></ul><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Recommended */</span>
+<span class="hljs-keyword">var</span> a = b + c;
+
+foo(bar);
+
+<span class="hljs-keyword">return</span> (a+b);
+
+<span class="hljs-keyword">if</span> (a === <span class="hljs-number">0</span>) {
+    <span class="hljs-comment">// ...</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span><span class="hljs-params">(b)</span> </span>{
+    <span class="hljs-comment">// ...</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(x)</span> </span>{
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre></div><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Not recommended */</span>
+<span class="hljs-keyword">var</span> a=b+c;
+
+foo (bar)
+
+<span class="hljs-keyword">return</span>(a+b);
+
+<span class="hljs-keyword">if</span>(a === <span class="hljs-number">0</span>) {
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span> <span class="hljs-params">(b)</span> </span>{
+    ...
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(x)</span> </span>{
+    ...
+}
+</code></pre></div><h4 id="逗号位置">逗号位置 <a href="#%E9%80%97%E5%8F%B7%E4%BD%8D%E7%BD%AE" title="Heading anchor" class="doc-anchor"></a></h4><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Recommended */</span>
+
+<span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>,
+    b = <span class="hljs-number">3</span>,
+    c;
+
+<span class="hljs-comment">/* Not Recommended */</span>
+
+<span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>
+    ,b
+    ,c;
+</code></pre></div><h3 id="圆括号">圆括号 <a href="#%E5%9C%86%E6%8B%AC%E5%8F%B7" title="Heading anchor" class="doc-anchor"></a></h3><p>圆括号在 JavaScript 中有两种作用，一种表示调用函数，一种表示不同的值的组合。只在必要的时候使用圆括号。</p><p>对于一元操作符（如<code>delete</code>、<code>typeof</code>、<code>void</code>），或是在某些关键词（如 <code>return</code>、<code>throw</code>、<code>case</code>、<code>new</code>）之后，不要使用括号。</p><h3 id="字符串">字符串 <a href="#%E5%AD%97%E7%AC%A6%E4%B8%B2" title="Heading anchor" class="doc-anchor"></a></h3><p>字符串使用<strong>单引号</strong>，只有 JSON 中的字符串属性值使用双引号。</p><p>字符串中的 HTML 属性使用双引号。</p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Recommended */</span>
+<span class="hljs-keyword">var</span> string = <span class="hljs-string">'this is a string'</span>,
+    object = {
+        str: <span class="hljs-string">"this is a JSON string"</span>
+    };
+</code></pre></div><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Not recommended */</span>
+<span class="hljs-keyword">var</span> string = <span class="hljs-string">"this is a string"</span>,
+    object = {
+        str: <span class="hljs-string">'this is a JSON string'</span>
+    };
+</code></pre></div><h3 id="对象">对象 <a href="#%E5%AF%B9%E8%B1%A1" title="Heading anchor" class="doc-anchor"></a></h3><p>对象的最后一个属性值后面不要写逗号（某些浏览器会报错）。</p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Recommended */</span>
+<span class="hljs-keyword">var</span> obj = {
+    a: <span class="hljs-number">1</span>,
+    b: <span class="hljs-number">2</span>,
+    c: <span class="hljs-number">3</span>
+};
+</code></pre></div><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/* Not recommended */</span>
+<span class="hljs-keyword">var</span> obj = {
+    a: <span class="hljs-number">1</span>,
+    b: <span class="hljs-number">2</span>,
+    c: <span class="hljs-number">3</span>,
+};
+</code></pre></div><h3 id="注释">注释 <a href="#%E6%B3%A8%E9%87%8A" title="Heading anchor" class="doc-anchor"></a></h3><p>使用 <a href="javascript:if(confirm('http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=Comments  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=Comments#Comments'" tppabs="http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=Comments#Comments">JSDoc</a>的注释风格，行内注释使用 <code>// 注释</code> 的形式。</p><p>为方便使用第三方工具生成 API 文档，注释必须严格按照 <a href="javascript:if(confirm('http://usejsdoc.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://usejsdoc.org/'" tppabs="http://usejsdoc.org/">JSDoc 语法</a>编写。</p><div class="doc-code demo-highlight"><pre class=""><code class="javascript"><span class="hljs-comment">/**
+* A JSDoc comment should begin with a slash and 2 asterisks.
+* Inline tags should be enclosed in braces like {@code this}.
+* @desc Block tags should always start on their own line.
+*/</span>
+</code></pre></div><h2 id="参考链接">参考链接 <a href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5" title="Heading anchor" class="doc-anchor"></a></h2><ul><li><a href="javascript:if(confirm('https://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml'" tppabs="https://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml">Google JavaScript Style Guide</a></li><li><a href="javascript:if(confirm('https://code.google.com/p/jsdoc-toolkit/wiki/TagReference  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://code.google.com/p/jsdoc-toolkit/wiki/TagReference'" tppabs="https://code.google.com/p/jsdoc-toolkit/wiki/TagReference">JSDoc Tag Reference</a></li><li><a href="javascript:if(confirm('http://javascript.crockford.com/code.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://javascript.crockford.com/code.html'" tppabs="http://javascript.crockford.com/code.html">Code Conventions for the JavaScript Programming Language</a></li><li><a href="javascript:if(confirm('https://github.com/jscs-dev/node-jscs  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/jscs-dev/node-jscs'" tppabs="https://github.com/jscs-dev/node-jscs">JavaScript Code Style checker</a></li><li><a href="javascript:if(confirm('http://jshint.com/docs/options/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://jshint.com/docs/options/'" tppabs="http://jshint.com/docs/options/">JSHint Options</a></li></ul><p><em>Revision: 2014.10.15</em></p><div id="issue-list"></div><script type="text/x-handlebars-template" id="issue-list-tpl"><h2>Issue 列表</h2>
+          <ul class="am-list issue-list">
+            {{#each this}}
+              <li><a href="{{html_url}}" target="_blank" class="am-text-truncate am-icon-bug">{{title}}
+                <span
+                  class="am-badge {{#ifCond state '=='
+                  'open'}}am-badge-danger{{else}}am-badge-success{{/ifCond}}">{{state}}</span></a></li>
+            {{/each}}
+          </ul></script><div class="ds-thread" id="ds-thread" data-thread-key="8713ca530e5020984260abd598e66fb3" data-title="开始使用 - Javascript-guide | Amaze UI"></div></div></div></section><a href="#amz-offcanvas" class="am-icon-btn am-icon-bars am-show-sm-only amz-sidebar-toggle" data-am-offcanvas><span class="am-sr-only">侧栏导航</span></a><footer class="amz-footer"><div class="am-g am-g-fixed"><div class="col-md-4 col-md-push-8 am-u-md-4 am-u-md-push-8"><ul class="amz-social"><li><a href="javascript: void(0)" data-am-popover="{content: 'Amaze UI 交流 Q 群：374946651'}" title="Amaze UI 用户交流群" target="_blank"><span class="am-icon-qq"></span></a></li><li><a href="javascript:if(confirm('http://weibo.com/allmobilize  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://weibo.com/allmobilize'" tppabs="http://weibo.com/allmobilize" title="云适配微博" target="_blank"><span class="am-icon-weibo"></span></a></li><li><a href="#am-wechat" title="云适配微信" data-am-modal><span class="am-icon-wechat"></span></a></li><li><a class="new-issue" href="javascript:if(confirm('https://github.com/allmobilize/amazeui/issues/new?title=Bug%3A%20&body=**%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0**%0A%0A%EF%BC%88%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E9%97%AE%E9%A2%98%EF%BC%89%0A%0A**%E4%BA%A7%E7%94%9F%E7%8E%AF%E5%A2%83**%0A%0A-%20%E8%AE%BE%E5%A4%87%EF%BC%9A%EF%BC%88%E6%89%8B%E6%9C%BA%E3%80%81%E5%B9%B3%E6%9D%BF%E7%AD%89%E7%A7%BB%E5%8A%A8%E8%AE%BE%E5%A4%87%E6%97%B6%E5%A1%AB%E5%86%99%E6%AD%A4%E9%A1%B9%EF%BC%89%0A-%20%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%BC%94%E7%A4%BA%E5%9C%B0%E5%9D%80%EF%BC%9A%0A%0A**%E5%A4%8D%E7%8E%B0%E6%AD%A5%E5%A5%8F**%0A%0A1.%20%0A2.%20%0A...%20%0A%20%0A**UA:**%20%0A  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/allmobilize/amazeui/issues/new?title=Bug%3A%20&body=**%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0**%0A%0A%EF%BC%88%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E9%97%AE%E9%A2%98%EF%BC%89%0A%0A**%E4%BA%A7%E7%94%9F%E7%8E%AF%E5%A2%83**%0A%0A-%20%E8%AE%BE%E5%A4%87%EF%BC%9A%EF%BC%88%E6%89%8B%E6%9C%BA%E3%80%81%E5%B9%B3%E6%9D%BF%E7%AD%89%E7%A7%BB%E5%8A%A8%E8%AE%BE%E5%A4%87%E6%97%B6%E5%A1%AB%E5%86%99%E6%AD%A4%E9%A1%B9%EF%BC%89%0A-%20%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%BC%94%E7%A4%BA%E5%9C%B0%E5%9D%80%EF%BC%9A%0A%0A**%E5%A4%8D%E7%8E%B0%E6%AD%A5%E5%A5%8F**%0A%0A1.%20%0A2.%20%0A...%20%0A%20%0A**UA:**%20%0A'" tppabs="https://github.com/allmobilize/amazeui/issues/new?title=Bug%3A%20&body=**%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0**%0A%0A%EF%BC%88%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E9%97%AE%E9%A2%98%EF%BC%89%0A%0A**%E4%BA%A7%E7%94%9F%E7%8E%AF%E5%A2%83**%0A%0A-%20%E8%AE%BE%E5%A4%87%EF%BC%9A%EF%BC%88%E6%89%8B%E6%9C%BA%E3%80%81%E5%B9%B3%E6%9D%BF%E7%AD%89%E7%A7%BB%E5%8A%A8%E8%AE%BE%E5%A4%87%E6%97%B6%E5%A1%AB%E5%86%99%E6%AD%A4%E9%A1%B9%EF%BC%89%0A-%20%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%BC%94%E7%A4%BA%E5%9C%B0%E5%9D%80%EF%BC%9A%0A%0A**%E5%A4%8D%E7%8E%B0%E6%AD%A5%E5%A5%8F**%0A%0A1.%20%0A2.%20%0A...%20%0A%20%0A**UA:**%20%0A" target="_blank" title="Bug 反馈"><span class="am-icon-paper-plane"></span></a></li></ul></div><div class="col-md-8 col-md-pull-4 am-u-md-8 am-u-md-pull-4"><h2 class="amz-fd"><a>云适配</a></h2><ul class="amz-links"><li><a href="../about/wantu.htm" tppabs="http://amazeui.org/about/wantu" class="am-icon-heart">&nbsp;妹子招亲</a> | <a href="../about/contact.htm" tppabs="http://amazeui.org/about/contact">联系我们</a> | <a href="../about/resources.htm" tppabs="http://amazeui.org/about/resources">品牌相关</a></li></ul><p class="amz-cp">&copy; 2015 AllMobilize, Inc. Licensed under <a href="javascript:if(confirm('http://opensource.org/licenses/MIT  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://opensource.org/licenses/MIT'" tppabs="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. Developed with <a href="javascript:if(confirm('http://www.jetbrains.com/webstorm/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.jetbrains.com/webstorm/'" tppabs="http://www.jetbrains.com/webstorm/" target="_blank">WebStorm</a>.</p></div></div></footer><div class="am-modal am-modal-no-btn" tabindex="-1" id="am-wechat"><div class="am-modal-dialog"><div class="am-modal-hd"><a href="" class="am-close am-close-spin" data-am-modal-close>&times;</a></div><div class="am-modal-bd"><img src="../../a.static.amazeui.org/assets/2.x/i/am/qr-ui.jpg" tppabs="http://a.static.amazeui.org/assets/2.x/i/am/qr-ui.jpg" alt="Amaze UI 微信"/><br/>在微信上关注我们</div></div></div><div class="amz-toolbar" id="amz-toolbar"><a href="#top" title="回到顶部" class="am-icon-btn am-icon-arrow-up" id="amz-go-top"></a> <a href="faq.htm" tppabs="http://amazeui.org/getting-started/faq" title="常见问题" class="am-icon-faq am-icon-btn am-icon-question-circle"></a></div><!--[if (gte IE 9)|!(IE)]><!--><script src="../../a.static.amazeui.org/assets/2.x/js/ZeroClipboard.min.js" tppabs="http://a.static.amazeui.org/assets/2.x/js/ZeroClipboard.min.js"></script><!--<![endif]--><script src="../../a.static.amazeui.org/assets/2.x/js/handlebars.min.js" tppabs="http://a.static.amazeui.org/assets/2.x/js/handlebars.min.js"></script><script src="../../a.static.amazeui.org/assets/2.x/js/main.min.js" tppabs="http://a.static.amazeui.org/assets/2.x/js/main.min.js"></script><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="http://hm.baidu.com/hm.js?b424d39312c46404f15e22574a531fbb",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}(),function(e,t,n){function a(){!function(e,t,n,a,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(n),s=t.getElementsByTagName(n)[0],o.async=1,o.src=a,s.parentNode.insertBefore(o,s)}(e,t,n,"../../www.google-analytics.com/analytics.js"/*tpa=http://www.google-analytics.com/analytics.js*/,"ga"),ga("create","UA-34196034-8","http://amazeui.org/getting-started/amazeui.org"),ga("send","pageview")}e.addEventListener?e.addEventListener("load",a,!1):e.attachEvent&&e.attachEvent("onload",a)}(window,document,"script");var _py=_py||[];_py.push(["a","9J..PngLvKZedYDSyrmcEuUyqX"]),_py.push(["domain","http://amazeui.org/getting-started/stats.ipinyou.com"]),_py.push(["e",""]),-function(e){var t=e.createElement("script"),n=e.body.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n),f="https:"==location.protocol,t.src=(f?"https":"http")+"://"+(f?"http://amazeui.org/getting-started/fm.ipinyou.com":"http://amazeui.org/getting-started/fm.p0y.cn")+"/j/adv.js"}(document);</script><noscript><img src="../../stats.ipinyou.com/adv.gif-a=9J..PngLvKZedYDSyrmcEuUyqX&e=.gif" tppabs="http://stats.ipinyou.com/adv.gif?a=9J..PngLvKZedYDSyrmcEuUyqX&e=" style="display:none;"/></noscript></body></html><!-- Cached page generated on Tue Jan 13 2015 03:06:20 GMT+0000 (UTC) -->
